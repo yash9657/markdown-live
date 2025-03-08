@@ -1,10 +1,9 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { useLocalStorage } from '@/hooks/useLocalStorage';
-import Header from '@/components/Header';
 import { ArrowRight, Edit, Eye, Download, Moon, Sun, Code, List, Heart, Save, Share2, Import } from 'lucide-react';
+import Header from '@/components/Header';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 const Home: React.FC = () => {
   // Use the same dark mode state from localStorage, but default to true (dark mode)
@@ -52,6 +51,22 @@ const Home: React.FC = () => {
                 </Link>
               </Button>
             </div>
+            {/* Product Hunt Badge */}
+            <div className="flex justify-center mt-6">
+              <a 
+                href="https://www.producthunt.com/posts/markdown-preview-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-markdown-preview-2" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=939729&theme=light&t=1741462763647" 
+                  alt="Markdown Preview - Type in Markdown, Watch It Come Alive | Product Hunt" 
+                  style={{ width: '250px', height: '54px' }} 
+                  width="250" 
+                  height="54" 
+                />
+              </a>
+            </div>
           </div>
         </section>
 
@@ -68,7 +83,6 @@ const Home: React.FC = () => {
                   See your formatted document instantly as you type with our split-screen view.
                 </p>
               </div>
-              
               <div className="bg-card dark:bg-gray-800 p-8 rounded-xl border shadow-sm dark:shadow-gray-800/30">
                 <div className="h-14 w-14 rounded-full bg-primary/10 dark:bg-blue-500/10 flex items-center justify-center mb-6">
                   <Share2 className="h-7 w-7 text-primary dark:text-blue-400" />
@@ -78,7 +92,6 @@ const Home: React.FC = () => {
                   Publish your documents to the community and discover content created by others.
                 </p>
               </div>
-              
               <div className="bg-card dark:bg-gray-800 p-8 rounded-xl border shadow-sm dark:shadow-gray-800/30">
                 <div className="h-14 w-14 rounded-full bg-primary/10 dark:bg-blue-500/10 flex items-center justify-center mb-6">
                   <Save className="h-7 w-7 text-primary dark:text-blue-400" />
@@ -89,7 +102,6 @@ const Home: React.FC = () => {
                 </p>
               </div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
               <div className="bg-card dark:bg-gray-800 p-8 rounded-xl border shadow-sm dark:shadow-gray-800/30">
                 <div className="h-14 w-14 rounded-full bg-primary/10 dark:bg-blue-500/10 flex items-center justify-center mb-6">
@@ -100,7 +112,6 @@ const Home: React.FC = () => {
                   Customize your writing environment with dark and light themes.
                 </p>
               </div>
-              
               <div className="bg-card dark:bg-gray-800 p-8 rounded-xl border shadow-sm dark:shadow-gray-800/30">
                 <div className="h-14 w-14 rounded-full bg-primary/10 dark:bg-blue-500/10 flex items-center justify-center mb-6">
                   <Heart className="h-7 w-7 text-primary dark:text-blue-400" />
@@ -110,7 +121,6 @@ const Home: React.FC = () => {
                   Like documents from the community and see what's trending.
                 </p>
               </div>
-              
               <div className="bg-card dark:bg-gray-800 p-8 rounded-xl border shadow-sm dark:shadow-gray-800/30">
                 <div className="h-14 w-14 rounded-full bg-primary/10 dark:bg-blue-500/10 flex items-center justify-center mb-6">
                   <Import className="h-7 w-7 text-primary dark:text-blue-400" />
