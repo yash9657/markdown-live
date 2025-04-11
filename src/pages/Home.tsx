@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Edit, Eye, Download, Moon, Sun, Code, List, Heart, Save, Share2, Import } from 'lucide-react';
+import { ArrowRight, Edit, Eye, Download, Moon, Sun, Code, List, Heart, Save, Share2, Import, Utensils } from 'lucide-react';
 import Header from '@/components/Header';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 
@@ -129,6 +129,68 @@ const Home: React.FC = () => {
                 <p className="text-muted-foreground">
                   Import published documents, download as markdown files, or copy to clipboard.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="support"
+          className="container mx-auto px-6 py-20 bg-[#12131e] rounded-2xl border border-gray-800 my-20 max-w-4xl"
+        >
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold mb-4">Support the Developer</h2>
+              <p className="text-gray-400 mb-6">
+                This Markdown editor is completely free, but if you find it useful, consider buying me a Chipotle bowl to fuel
+                future development.
+              </p>
+              <div className="flex items-center space-x-4 mb-6">
+                <Utensils className="h-6 w-6 text-red-500" />
+                <p className="text-gray-300">Each burrito bowl helps keep the code spicy!</p>
+              </div>
+              <a
+                href="https://buymeacoffee.com/yash9657"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-[#8D0E00] hover:bg-[#A81000] text-white font-bold py-3 px-6 rounded-full transition-all"
+              >
+                <Utensils className="h-5 w-5" />
+                <span>Buy Me Chipotle</span>
+              </a>
+            </div>
+            <div className="md:w-1/2 flex justify-center">
+              <div className="bg-[#1a1b2e] p-6 rounded-xl border border-gray-800 max-w-xs w-full">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-gray-700 overflow-hidden">
+                    <img
+                      src="https://i.ibb.co/709DNRv/IMG-7164-2.jpg"
+                      alt="Developer"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-bold">Yash Bhalgat</h3>
+                    <p className="text-sm text-gray-400">Developer</p>
+                  </div>
+                </div>
+                <p className="text-gray-400 text-sm mb-4">
+                  "I love to build new things and I'm just trying to be better at it :)"
+                </p>
+                <div className="flex justify-between">
+                  <div className="flex flex-col items-center">
+                    <span className="text-red-500 font-bold">$2</span>
+                    <span className="text-xs text-gray-500">Drink</span>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-red-500 font-bold">$5</span>
+                    <span className="text-xs text-gray-500">+ Chips</span>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-red-500 font-bold">$10</span>
+                    <span className="text-xs text-gray-500">+ Bowl</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
